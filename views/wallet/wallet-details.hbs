@@ -1,0 +1,61 @@
+<div class="details-head">
+  <h1>{{name}} Wallet</h1>
+
+  <p>Description: {{description}}</p>
+
+  <span>Your budget: {{initialBudget}}</span>
+
+  <hr />
+</div>
+<form class="details-form" action="/wallet/add-tracker/{{_id}}" method="post">
+
+  <label>
+    Expense
+    <select name="expense" id="expence-types">
+      <option value="fixed-expense">Fixed Expense</option>
+      <option value="variable-expense">Variable Expense</option>
+      <option value="saving-expense">Saving Expense</option>
+    </select>
+  </label>
+
+  <label>
+    Description
+    <input
+      type="description"
+      name="description"
+      placeholder="wallet@thewallet.com"
+    />
+  </label>
+
+  <label>
+    Value
+    <input type="value" name="value" placeholder="*******" />
+  </label>
+  <button class="button-design" type="submit">Add Tracker</button>
+  {{! <button type="submit"><box-icon type="solid" name="check-square"></box-icon>
+  </button> }}
+</form>
+<div class="tracker-container">
+  {{#each trackers}}
+    <div class="tracker-item">
+
+      <h1>{{description}}</h1>
+      <hr />
+      <span>{{expense}}</span>
+      <hr />
+      <span>${{value}}</span>
+      <hr />
+      <form action="/wallet/delete/{{_id}}">
+        <button class="button-design" type="delete">Delete</button>
+      </form>
+      <form action="/wallet/edit-tracker/{{_id}}" method="get">
+        <button
+          id="edit-button"
+          class="button-design"
+          type="submit"
+        >Edit</button>
+      </form>
+
+    </div>
+  {{/each}}
+</div>

@@ -1,0 +1,15 @@
+<h2>Edit Wallet</h2>
+
+<form action="/wallet/edit-wallet/{{_id}}" method="post">
+
+    <label for="name">Name</label>
+    <input id="name" type="text" name="name" value="{{name}}">
+
+    <label for="description">Description</label>
+    <input id="description" type="text" name="description" value="{{description}}">
+
+    <label for="initialBudget">initial Budget</label>
+    <input id="initialBudget" type="text" name="initialBudget" value="{{initalBudget}}">
+
+    <button class="button-design" type="submit">Edit Wallet</button>
+</form>

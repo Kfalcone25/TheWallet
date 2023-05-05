@@ -1,0 +1,43 @@
+<div>
+  <div class="wallet-headline">
+    <h1>Current Wallets</h1>
+    <div>
+      <a href="/wallet/add-wallet"><button class="button-design"><box-icon
+            name="plus-medical"
+          ></box-icon>Add New</button></a>
+    </div>
+  </div>
+  <div class="grid-container">
+
+    {{#each wallets}}
+      <a href="/wallet/wallet-details/{{_id}}">
+        <div class="grid-item">
+
+          <h2>{{name}}</h2>
+          <div class="wallet-tags">
+            <span>Description: {{description}}</span>
+            <p>Initial Budget: ${{initialBudget}}</p>
+          </div>
+
+          <div class="edit-delete">
+            <form action="/wallet/delete-wallet/{{_id}}" method="get">
+              <button
+                id="delete-button"
+                class="button-design"
+                type="submit"
+              >Delete</button>
+            </form>
+            <form action="/wallet/edit-wallet/{{_id}}" method="get">
+              <button
+                id="edit-button"
+                class="button-design"
+                type="submit"
+              >Edit</button>
+            </form>
+          </div>
+        </div>
+      </a>
+
+    {{/each}}
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<div id="form">
+  <h2>Sign up</h2>
+
+  <form id="signup-form" action="/auth/signup" method="POST">
+
+    <label> Username
+      <input type="username" name="username" placeholder="create a username"/>
+    </label>
+
+    <label class="email"> Email
+      <input type="email" name="email" placeholder="Drink123@brews.com">
+    </label>
+
+    <label> Password
+      <input type="password" name="password" placeholder="*******" />
+    </label>
+
+    <button id="signup-button" class="button-design" type="submit">sign up</button>
+
+
+  <div class="socials">
+    <a href=""><box-icon type='logo' name='gmail'></box-icon></a>
+    <a href=""><box-icon name='github' type='logo' ></box-icon></a>
+    <a href=""><box-icon name='twitter' type='logo' ></box-icon></a>
+  </div>
+
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}}
+  </form>
+
+
+</div>

@@ -1,0 +1,35 @@
+<div id="form">
+  <h2>Login</h2>
+
+  <form id="login-form" action="/auth/login" method="POST">
+
+    <div class="login-fields">
+      <div class="login-email">
+        <label>
+          email
+          <input type="email" name="email" placeholder="wallet@thewallet.com" />
+        </label>
+      </div>
+
+      <div class="login-password">
+        <label>
+          Password
+          <input type="password" name="password" placeholder="*******" />
+        </label>
+      </div>
+    </div>
+    
+
+    <div class="socials">
+      <a href=""><box-icon type="logo" name="gmail"></box-icon></a>
+      <a href=""><box-icon name="github" type="logo"></box-icon></a>
+      <a href=""><box-icon name="twitter" type="logo"></box-icon></a>
+    </div>
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}}
+
+    <button id="login-button" class="button-design" type="submit">login</button>
+  </form>
+
+</div>

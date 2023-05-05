@@ -1,0 +1,19 @@
+
+{{#if username}}
+  <div class="profile-content">
+    <div class="profile-container">
+      <h2>Welcome, {{username}}!</h2>
+      <image id="profileImage" src="{{imageUrl}}" />
+    </div>
+
+    <div class="navigation">
+      <a href="/wallet/all-wallets"><button class="button-design">Your Wallets</button></a>
+
+      <a href="/"><button class="button-design">Logout</button></a>
+    </div>
+
+  </div>
+{{else}}
+  <span>You are currently signed out! Please sign up or login to view profile.</span>
+  <a href="/auth/signup"><button class="button-design">Sign Up here</button></a>
+{{/if}}

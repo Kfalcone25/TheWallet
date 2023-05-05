@@ -1,0 +1,30 @@
+<h2>Edit Tracker</h2>
+
+<form class="details-form" action="/wallet/edit-tracker/{{_id}}" method="post">
+
+  <label>
+    Expense
+    <select name="expense" id="expence-types">
+      <option value="fixed-expense">Fixed Expense</option>
+      <option value="variable-expense">Variable Expense</option>
+      <option value="saving-expense">Saving Expense</option>
+    </select>
+  </label>
+
+  <label>
+    Description
+    <input
+      type="description"
+      name="description"
+      placeholder="wallet@thewallet.com"
+    />
+  </label>
+
+  <label>
+    Value
+    <input type="value" name="value" placeholder="*******" />
+  </label>
+  <button class="button-design" type="submit">Edit Tracker</button>
+  {{! <button type="submit"><box-icon type="solid" name="check-square"></box-icon>
+  </button> }}
+</form>

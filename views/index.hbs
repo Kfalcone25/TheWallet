@@ -1,0 +1,17 @@
+<div id="main">
+    <div class="main-container">
+        <div class="main-content">
+            <h1>TheWallet</h1>
+            <span>Welcome to your own personal wallet!</span>
+            {{#if username}}
+            <button id="main-button" class="button-design">
+                <a href="/account/profile.hbs"></a>add wallet</a>
+            </button>
+            {{else}}
+            <a href="auth/signup">
+                <button class="button-design">Get Started Here</button>
+            </a>
+            {{/if}}
+        </div>
+    </div>
+</div>
