@@ -12,7 +12,7 @@ router.get("/signup", (req, res, next) => {
   res.render("auth/signup.hbs");
 });
 
-router.post("/signup", isLoggedIn, (req, res, next) => {
+router.post("/signup", isLoggedOut, (req, res, next) => {
   const { username, email, password } = req.body;
 
     
